@@ -20,8 +20,3 @@ This is a project by Krupa Venkatesan analyzing data on CO2 Emissions from diffe
 
 
 
-Include in your README:
-- A description (1-2 sentences) about your dataset
-- Your name 
-
-
