@@ -2,7 +2,7 @@
 library(ggplot2)
 
 ggplot(data = co2_data, aes(x=Make, y=CO2.Emissions.g.km., color=CO2.Emissions.g.km.)) +
-  geom_point()
+  geom_point() 
 
 ggplot(data = co2_data, aes(x=Fuel.Consumption.Comb..mpg., y=CO2.Emissions.g.km.)) +
   geom_line(stat="summary",
