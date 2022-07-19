@@ -1,3 +1,7 @@
+
+## load required libraries
+library(dplyr)
+
 ## Z scores and confidence intervals
 ## let's say we eat 100 boxes of cookies and find the average
 ## number of cookies in a box is 38.2
@@ -101,10 +105,18 @@ t.test(mice2$before, mice2$after, paired = T)
 t.test(mice2$before, mice2$after, paired = T, alternative = "less")
 #if alternative = less, it is checking if after is greater than before. AKA before is less than after which is what we want to check
 
+View(iris)
 
+##Self-practice 
+Audi <- filter(small_co2, Make == "AUDI")
+Audi
+Lamb <- filter(small_co2, Make == "LAMBORGHINI")
 
+t.test(Audi$mc, Lamb$mc)
 
-
+##P-value = 7.131e-13 is less than 0.05, so the results 
+##are statistically significant, suggesting that they are 
+##significantly different
 
 
 
