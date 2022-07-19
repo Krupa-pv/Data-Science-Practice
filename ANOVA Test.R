@@ -1,5 +1,10 @@
 ####ANOVA Test ####
 
+
+## load required libraries
+library(dplyr)
+
+
 sepal_len_anova <- aov(data = iris, Sepal.Length ~ Species) #numeric variable ~ categorical variable
 
 #Are any categories different?
@@ -31,3 +36,8 @@ signif_results <- TukeyHSD(diamond_price_color)$color
 arrange(as.data.frame(signif_results), `p adj`)
 
 
+##Self practice
+View(small_co2)
+mean_co2_anova <- aov(data = small_co2, mc ~ Make)
+summary(mean_co2_anova)
+TukeyHSD(mean_co2_anova)
